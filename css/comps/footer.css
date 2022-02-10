@@ -1,0 +1,54 @@
+footer{
+    background-color: rgb(37, 35, 35);
+    margin-top: -59px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    color: rgb(202, 200, 200);
+}
+footer nav {
+    display: grid;
+    gap: 10px;
+}
+footer nav h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+footer nav a {
+    color:rgb(165, 162, 162);
+    transition: .2s;
+}
+footer nav a:hover {
+    color: #fff;
+    transition: .2s;
+}
+footer button {
+    background-color: rgb(128, 238, 65);
+    border: none;
+    height: 35px;
+    color: #fff;
+    border-radius: 3px;
+}
+footer button:hover {
+    cursor: pointer;
+}
+footer input {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #DDDDDD;
+    height: 29px;
+    border-radius: 3px;
+}
+footer input[type=text]:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgba(81, 203, 238, 1);
+}

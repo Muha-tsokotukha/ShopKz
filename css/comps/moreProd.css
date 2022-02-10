@@ -1,0 +1,27 @@
+.moreProduct{
+    margin-top: 50px;
+}
+.moreProduct-name {
+    font-size: 36px;
+}
+.moreProduct-container {
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.moreProduct-container img {
+    width: 200px;
+}
+button.danger {
+    background-color: orangered;
+    border-radius: 10px;
+    border: 1px solid orange;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+button.danger:hover{
+    cursor: pointer;
+}

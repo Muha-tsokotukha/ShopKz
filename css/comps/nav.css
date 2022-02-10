@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(190, 190, 243);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+section.container {
+    background-color: #fff;
+    margin: 60px 100px;
+    padding: 20px;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-logo img {
+    width: 250px;
+}
+.nav a{
+    color: rgb(113, 146, 207);
+}
+.nav-contacts{
+    display: grid;
+    gap: 5px;
+}
+.nav-contacts p:first-child,.nav-contacts p:nth-child(2){
+    font-size: 24px;
+}
+.nav-contacts p:nth-child(3),.nav-contacts p:last-child{
+    font-size: 18px;
+}
+.nav-acc{
+    display: grid;
+    gap: 20px;
+}
+.nav-acc--basket {
+    display: flex;
+    justify-content: space-between;
+}
+.nav-acc--basket div{
+    display: grid;
+    align-items: center;
+    border-left: 1px solid rgb(236, 236, 236);
+    padding-left: 15px;
+    gap: 10px;
+}
+.nav-acc--cabinet {
+    margin-left: 113px;
+}
+.nav-acc--basket > :hover {
+    /* border-bottom: 1px solid orangered; */
+}
