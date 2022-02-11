@@ -2,13 +2,14 @@
     display: flex;
     gap: 60px;
     flex-wrap: wrap;
-  
+    
 }
 .products-item {
     display: grid;
     align-items: center;
     justify-content: center;
-    width: 150px;
+    width: 300px;
+    height: 250px;
     border: 1px solid gray;
     transition: 0.2s;
 }

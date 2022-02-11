@@ -28,10 +28,11 @@
                     <p><a href="">Гарантия надёжности</a></p>
                     <span>Купить дешевле&#9660;</span>
                     
-                    <div class="nav-search">
-                        <input type="text" placeholder="Поиск по товарам">
+                    <form class="nav-search" method="GET">
+                        <input name="page" value="1" type="hidden">
+                        <input name="q" type="text" placeholder="Поиск по товарам">
                         <img src="img/search.png" alt="">
-                    </div>
+                    </form>
                 </div>
 
                 <div class="slider">

@@ -49,3 +49,9 @@ section.container {
 .nav-acc--basket > :hover {
     /* border-bottom: 1px solid orangered; */
 }
+
+.pagination-item,.pagination-item a {
+    margin-top: 100px;
+    margin-right: 50px;
+    color:#017BA1;
+}
