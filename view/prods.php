@@ -12,10 +12,6 @@
 		    $count = mysqli_fetch_assoc($query_count);
         }
 
-
-        
-
-
         $categs = mysqli_query($con, $sql);
         if( mysqli_num_rows($categs) > 0 ){
             while($categ_row = mysqli_fetch_assoc($categs)){
@@ -27,8 +23,19 @@
         <div class="products">
 
             <?php 
+
                 $page = 1; 
                 $qry_prod = "SELECT * FROM products WHERE category_id=".$categ_row['id'];
+                
+                
+                if( isset($_GET["q"]) ){
+                    
+                    $q =strtolower($_GET["q"]);
+                    $qry_prod .= " AND LOWER(name) LIKE '%$q%' ";
+                    // echo $qry_prod;
+                    // OR LOWER(make) LIKE '%$q%'
+                }
+
                 if(isset($_GET["page"]) && intval($_GET["page"])){
                     $skip = ($_GET['page'] - 1) * $limit;
                     $qry_prod .= " LIMIT $skip,$limit ";
