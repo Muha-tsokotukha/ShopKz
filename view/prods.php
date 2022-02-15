@@ -17,11 +17,7 @@
             while($categ_row = mysqli_fetch_assoc($categs)){
 
     ?>
-        <div class="products-wrapper">
-        <p style="font-size:large;color:gray;margin-top:50px;"><?=$categ_row['name']?></p>
-        <hr>
-        <div class="products">
-
+        
             <?php 
 
                 $page = 1; 
@@ -47,6 +43,12 @@
 
                 $data = mysqli_query($con,$qry_prod);
                 if( mysqli_num_rows($data) > 0 ){
+                ?>
+                <div class="products-wrapper">
+                <p style="font-size:large;color:gray;margin-top:50px;"><?=$categ_row['name']?></p>
+                <hr>
+                <div class="products">
+                <?php
                     while($row = mysqli_fetch_assoc($data)){
 
             ?>
@@ -78,8 +80,6 @@
             
             <?php
                 }
-            }else{
-                echo "No products are available";
             }
             ?>
 
