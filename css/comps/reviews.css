@@ -1,0 +1,137 @@
+.review__button{
+    transform: rotate(270deg);
+    background-color: orangered;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 2px;
+    position: fixed;
+    top: 250px;
+    left: 95.5%;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.review__button:hover{
+    left: 95.3%;
+    transition: 0.1s;
+}
+.reviews-container.active{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 150px;
+    left: 450px;
+    background-color: #f0f0f0;
+    border: 3px solid rgba(68, 0, 255, 0.739);
+    border-radius: 4px;
+}
+.review-container {
+    display: none;
+}
+.reviews__header{
+    display: none;
+}
+.reviews__input{
+    display: none;
+}
+.reviews__header.active{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 15px;
+    background-color: #DBDBDB;
+}
+.reviews__input.active {
+    padding: 5px 15px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.reviews__input input {
+    width: 100%;
+}
+.reviews {
+    display: none;
+    width: 500px;
+    height: 500px;
+}
+.reviews.active {
+    display: block;
+    background-color: #FFFFFF;
+    padding: 5px 15px;
+    width: 500px;
+    height: 300px;
+    overflow-y: scroll;
+}
+.review{
+    border-top: 1px dotted #c2c2c2;
+    border-left: 1px solid #c2c2c2;
+    border-right: 1px solid #c2c2c2;
+    padding: 5px;
+    display: grid;
+    gap: 10px;
+}
+.review-text {
+    color: rgba(0, 89, 255, 0.808);
+}
+.review span {
+    font-weight: bold;
+    width: 30%;
+}
+.review-author{
+    font-weight: normal;
+}
+.review-container{
+    display: block;
+    padding-left: 200px;
+    padding-right:200px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding: 30px 200px 50px 200px;
+}
+.review-text__author{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.review-comments{
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-bottom: 1px solid #DBDBDB;
+}
+.comment {
+    background-color: #f0f0f0;
+    padding: 10px;
+    padding-left: 20px;
+    border-bottom: 1px dotted #000;
+    display: flex;
+    justify-content: space-between;
+}
+.comment__author{
+    border-bottom: 1px solid #626262;
+    margin-bottom: 10px;
+    width: 100px;
+    font-weight: bold;
+}
+.review__div {
+    display: flex;
+    justify-content: space-around;
+}
+.review__div a {
+    width: 30%;
+}
+.deleteBtn{
+    color: red;
+    border: 1px solid red;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.deleteBtn:hover {
+    font-weight: bold;
+}

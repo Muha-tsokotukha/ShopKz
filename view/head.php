@@ -8,3 +8,14 @@
 <link rel="stylesheet" href="css/all.css">
 <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+<script>
+    <?php 
+        if( isset($_SESSION["user_id"]) ){ ?>
+            localStorage.setItem("user_id", <?=$_SESSION["user_id"]?> );
+        <?php }
+        else{
+        ?>
+            if(localStorage.getItem("user_id"))localStorage.removeItem("user_id");
+        <?php }?>
+</script>
