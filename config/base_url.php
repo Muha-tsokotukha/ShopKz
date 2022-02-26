@@ -1,3 +1,3 @@
 <?php 
-    $BASE_URL = "http://localhost/Shop_kz";
+    $BASE_URL = "http://shop-kz.test/";
 ?>
