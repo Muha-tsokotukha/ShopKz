@@ -41,8 +41,8 @@
         }
         
 
-        header("Location: $BASE_URL/profile.php");
+        header("Location: $BASE_URL/profile");
     }else{
-        header("Location: $BASE_URL/admin.php?id=".$_POST["id"]."&error=3");
+        header("Location: $BASE_URL/admin?id=".$_POST["id"]."&error=3");
     }
 ?>

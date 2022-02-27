@@ -32,8 +32,8 @@
 
         }
         
-        header("Location: $BASE_URL/index.php");
+        header("Location: $BASE_URL/index");
     }
-    header("Location: $BASE_URL/index.php");
+    header("Location: $BASE_URL/index");
 
 ?>

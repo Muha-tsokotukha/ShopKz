@@ -17,7 +17,7 @@
             
         <?php 
             if(!isset($_SESSION["user_id"])){
-                header("Location: $BASE_URL/index.php");
+                header("Location: $BASE_URL/index");
                 exit();
             }
             $data = mysqli_query($con,"SELECT s.* FROM products s LEFT OUTER JOIN bookmark b on s.id=b.item_id WHERE b.user_id=".$_SESSION["user_id"]);
@@ -38,7 +38,7 @@
                     <button class="addButton">+</button>
                     
                 </div>
-                <a href="<?=$BASE_URL?>/product.php?id=<?=$row["id"]?>">More</a>
+                <a href="<?=$BASE_URL?>/product?id=<?=$row["id"]?>">More</a>
                 
             </div>
 

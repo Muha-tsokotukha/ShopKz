@@ -8,7 +8,7 @@ const currentUserId=  localStorage.getItem("user_id");
 
 
 function getComments(){
-    axios.get(base_url + "/api/review/comment_list.php?id=" + id).then(res=>{
+    axios.get(base_url + "/api/review/comment_list?id=" + id).then(res=>{
         showComments(res.data);
     });
 }
@@ -50,7 +50,7 @@ addComment.addEventListener('click', ()=>{
 
 
 function removeComment(commentId){
-    axios.delete(base_url + "/api/review/delete.php?id="+commentId).then(res=>{
+    axios.delete(base_url + "/api/review/delete?id="+commentId).then(res=>{
         getComments(id);
     });
 }

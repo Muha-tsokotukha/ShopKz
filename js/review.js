@@ -33,7 +33,7 @@ button.addEventListener('click', ()=>{
 
 
 function getReviews(){
-    axios.get(base_url + "/api/review/list.php?id=" + id).then(res=>{
+    axios.get(base_url + "/api/review/list?id=" + id).then(res=>{
         showReviews(res.data);
     });
 }
@@ -51,7 +51,7 @@ function showReviews(revs){
             <p class="review-text">${revs[i].text}</p>
             <div class="review__div">
                 <span class="review-author">${revs[i].name}</span>
-                <a target="_blank" href='review-details.php?id=${revs[i].id}&author_id=${revs[i].author_id}'>Комментарии</a>
+                <a target="_blank" href='review-details?id=${revs[i].id}&author_id=${revs[i].author_id}'>Комментарии</a>
                 ${deleteBtn}
             </div>
         </div>
@@ -75,7 +75,7 @@ btn.addEventListener('click', ()=>{
 
 
 function removeComment(revId){
-    axios.delete(base_url + "/api/review/review_delete.php?id="+revId).then(res=>{
+    axios.delete(base_url + "/api/review/review_delete?id="+revId).then(res=>{
         getReviews();
     });
 }

@@ -4,10 +4,10 @@
                 <?php 
                     if(isset($_SESSION["user_id"])){
                 ?>
-                <a href="<?=$BASE_URL?>/profile.php">
+                <a href="<?=$BASE_URL?>/profile">
                 <?php }else{
                     ?>
-                <a href="<?=$BASE_URL?>/index.php">
+                <a href="<?=$BASE_URL?>/index">
                 
                 <?php }?>
                 <img src="img/logo.png" alt="logo">
@@ -25,15 +25,15 @@
                 ?>
                 <div class="nav-acc--cabinet">
                     <p><a href="">Личный кабинет</a></p>
-                    <p><a href="<?=$BASE_URL?>/api/user/signout.php">Выход</a></p>
+                    <p><a href="<?=$BASE_URL?>/api/user/signout">Выход</a></p>
                 </div>
                 <?php
                     }
                     else{
                 ?>
                 <div class="nav-acc--cabinet">
-                    <p><a href="login.php">Вход</a> в личный кабинет</p>
-                    <p><a href="reg.php">Регистрация</a></p>
+                    <p><a href="login">Вход</a> в личный кабинет</p>
+                    <p><a href="reg">Регистрация</a></p>
                 </div>
                 <?php } 
                 ?>
@@ -44,10 +44,10 @@
                         <a href="">Сравнение</a>
                     </div>
                     
-                    <a href="bookmarks.php">
+                    <a href="bookmarks">
                             <div>
                                 <img src="img/want.jpg" alt="2">
-                                <a href="bookmarks.php">Желания</a>
+                                <a href="bookmarks">Желания</a>
                             </div>
                     </a>
                     

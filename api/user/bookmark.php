@@ -14,7 +14,7 @@
         $query = mysqli_stmt_get_result($prep);
         
         if( mysqli_num_rows($query) >= 1 ){
-            header("Location: $BASE_URL/profile.php");
+            header("Location: $BASE_URL/profile");
             exit();
         }
 
@@ -22,6 +22,6 @@
         mysqli_stmt_bind_param($prep, "ii",$id, $user_id );
         mysqli_stmt_execute($prep);
     }
-    // header("Location: $BASE_URL/profile.php");
+    // header("Location: $BASE_URL/profile");
 
 ?>

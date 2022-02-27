@@ -15,7 +15,7 @@
         $query = mysqli_stmt_get_result($prep);
 
         if(mysqli_num_rows($query) != 1){
-            header("Location: $BASE_URL/login.php?error=7");
+            header("Location: $BASE_URL/login?error=7");
             exit();
         }
 
@@ -23,11 +23,11 @@
         session_start();
         $_SESSION["user_id"] = $row["id"];
 
-        header("Location: $BASE_URL/profile.php");
+        header("Location: $BASE_URL/profile");
         
     }
     else{
-        header("Location: $BASE_URL/signin.php?error=7");
+        header("Location: $BASE_URL/signin?error=7");
     }
 
 ?>

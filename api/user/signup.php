@@ -8,7 +8,7 @@
     && strlen($_POST["name"])>0 && strlen($_POST["second_name"])>0 && strlen($_POST["email"])>0 && strlen($_POST["number"])>0 && strlen($_POST["password1"])>0 && strlen($_POST["password2"])>0   
     ){
         if($_POST["password1"] != $_POST["password2"]){
-            header("Location: $BASE_URL/reg.php?error=5");
+            header("Location: $BASE_URL/reg?error=5");
             exit();
         }
         
@@ -25,7 +25,7 @@
         $query = mysqli_stmt_get_result($prep);
 
         if(mysqli_num_rows($query)  > 0 ){
-            header("Location: $BASE_URL/reg.php?error=6");
+            header("Location: $BASE_URL/reg?error=6");
             exit();
         }
     
@@ -36,12 +36,12 @@
         
         
 
-        header("Location: $BASE_URL/login.php");
+        header("Location: $BASE_URL/login");
     
     }
     else
     {
-        header("Location: $BASE_URL/reg.php?error=4");
+        header("Location: $BASE_URL/reg?error=4");
     }
 
 ?>

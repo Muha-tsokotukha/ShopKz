@@ -17,7 +17,7 @@
             include 'view/page.php';
             // session_start();
             if(!isset($_SESSION["user_id"])){
-                header("Location: $BASE_URL/reg.php");
+                header("Location: $BASE_URL/reg");
             }
             include 'view/prods.php';
             

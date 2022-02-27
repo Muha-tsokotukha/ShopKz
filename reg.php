@@ -15,7 +15,7 @@
 
             <div class="container-reg">
                 <h1>Регистрация</h1>
-                <form action="api/user/signup.php" method="POST">
+                <form action="api/user/signup" method="POST">
 
                     <input type="text" name="name" placeholder="Имя">
                     <input type="text" name="second_name" placeholder="Фамилия">

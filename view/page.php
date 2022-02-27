@@ -6,7 +6,7 @@
                 <?php 
                     $query = mysqli_query($con, "SELECT * FROM categories");
                     while($row = mysqli_fetch_assoc($query)){
-                        echo "<div class='mainPage-categories--item'><a href='?category_id=".$row['id']."'>".$row['name']."</a></div>";
+                        echo "<div class='mainPage-categories--item'><a href='$BASE_URL/profile?category_id=".$row['id']."'>".$row['name']."</a></div>";
                     }
                 ?>
                 

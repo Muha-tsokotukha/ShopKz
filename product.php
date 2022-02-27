@@ -25,7 +25,7 @@
                 $cost = $row["cost"];
                 $img_path = $row["img"];
             }else{
-                header("Location: $BASE_URL/profile.php");
+                header("Location: $BASE_URL/profile");
             }
         ?>
 
@@ -38,7 +38,7 @@
                 </div>
                 <div>
                     <p><?=$cost?>$</p>
-                    <a href="<?=$BASE_URL?>/api/admin/delete.php?id=<?=$id?>"><button class="danger" type="submit">Купить</button></a>
+                    <a href="<?=$BASE_URL?>/api/admin/delete?id=<?=$id?>"><button class="danger" type="submit">Купить</button></a>
                     
                 </div>
             </div>

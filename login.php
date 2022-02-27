@@ -14,7 +14,7 @@
 
             <div class="container-reg">
                 <h1>Вход</h1>
-                <form action="api/user/signin.php" method="POST">
+                <form action="api/user/signin" method="POST">
 
                     <input type="text" name="email" placeholder="Почта">
                     

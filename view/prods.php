@@ -71,7 +71,7 @@
                     <div>
                         <button class="addButton">+</button>
                         <button class="addButton">
-                            <a href="api/user/bookmark.php?id=<?=$row["id"]?>" >&hearts;</a>
+                            <a href="api/user/bookmark?id=<?=$row["id"]?>" >&hearts;</a>
                         </button>
                     </div>
 
