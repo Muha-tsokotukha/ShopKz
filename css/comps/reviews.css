@@ -118,7 +118,7 @@
 }
 .review__div {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .review__div a {
     width: 30%;
@@ -134,4 +134,16 @@
 }
 .deleteBtn:hover {
     font-weight: bold;
+}
+.delete-review{
+    color: red;
+    border: 1px solid red;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+.delete-review:hover{
+    color: rgb(219, 5, 5);
+    border: 1px solid rgb(219, 5, 5);
 }

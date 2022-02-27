@@ -1,10 +1,11 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
 const base_url = document.body.dataset.baseurl;
-const commentsDiv = document.querySelector(".comment__container"); 
-const textarea = document.getElementById("comment-text");
-const addComment = document.getElementById("add-comment");
+const reviewsDiv = document.querySelector(".reviews"); 
+const textarea = document.getElementById("form-review__input");
+const btn = document.getElementById("form-review__btn");
 const currentUserId=  localStorage.getItem("user_id");
+
 
 const button = document.querySelector(".review__button");
 const container = document.querySelector(".reviews-container");
@@ -31,50 +32,50 @@ button.addEventListener('click', ()=>{
 })
 
 
-function getComments(){
-    axios.get(base_url + "/api/review/comment_list.php?id=" + id).then(res=>{
-        showComments(res.data);
+function getReviews(){
+    axios.get(base_url + "/api/review/list.php?id=" + id).then(res=>{
+        showReviews(res.data);
     });
 }
 
-function showComments(comments){
-    let commentsHTML = ``;
+function showReviews(revs){
+    let revsHTML = ``;
     let deleteBtn = ``;
-    for(let i = 0; i < comments.length; i++){
+    for(let i = 0; i < revs.length; i++){
         
-        if( currentUserId == comments[i].author_id ){
-            deleteBtn= `<span class="deleteBtn" onclick='removeComment(${comments[i].id})'> Удалить </span>`; 
+        if( currentUserId == revs[i].author_id ){
+            deleteBtn= `<span class="delete-review" onclick='removeComment(${revs[i].id})'> Удалить </span>`; 
         }
-        commentsHTML += `
-        <div class="comment">
-            <div>
-                <h1 class="comment__author">${comments[i].name}</h1>
-                <p  class="comment__content">${comments[i].text}</p>
+        revsHTML += `
+        <div class="review">
+            <p class="review-text">${revs[i].text}</p>
+            <div class="review__div">
+                <span class="review-author">${revs[i].name}</span>
+                <a target="_blank" href='review-details.php?id=${revs[i].id}&author_id=${revs[i].author_id}'>Комментарии</a>
+                ${deleteBtn}
             </div>
-            ${deleteBtn}
         </div>
         `;
     }
-    commentsDiv.innerHTML = commentsHTML;
+    reviewsDiv.innerHTML = revsHTML;
 }
 
-getComments();
+getReviews();
 
 
-addComment.addEventListener('click', ()=>{
+btn.addEventListener('click', ()=>{
 
-    axios.post(base_url + "/api/review/comment_add.php", {
+    axios.post(base_url + "/api/review/add.php", {
         text: textarea.value,
-        review_id: id
     }).then(res=>{
-        getComments(id);
+        getReviews();
         textarea.value="";
     })
 });
 
 
-function removeComment(commentId){
-    axios.delete(base_url + "/api/review/delete.php?id="+commentId).then(res=>{
-        getComments(id);
+function removeComment(revId){
+    axios.delete(base_url + "/api/review/review_delete.php?id="+revId).then(res=>{
+        getReviews();
     });
 }

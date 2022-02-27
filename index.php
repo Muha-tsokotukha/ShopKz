@@ -23,7 +23,8 @@
     <button class="review__button">Отзывы</button>
 
     <?php include "view/reviews.php"; ?>
-    <script src="<?=$BASE_URL?>/js/isActive.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js"></script>
+    <script src="<?=$BASE_URL?>/js/review.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
